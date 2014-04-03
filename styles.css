@@ -25,6 +25,43 @@ h1 {
 	text-transform: uppercase;
 }
 
+#logo {
+	float: right;
+	margin-top: 20px;
+	transform: rotate(0);
+	transition: all 200ms linear;
+
+	animation-name: rotate;
+	animation-duration: 0.5s;
+	animation-iteration-count: 3;
+	animation-timing-function: linear;
+}
+
+#logo:hover {
+	animation-name: rotate;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotate {
+	from {
+		-moz-transform: rotate(0);
+		-ms-transform: rotate(0);
+		-o-transform: rotate(0);
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	to {
+		-moz-transform: rotate(120deg);
+		-ms-transform: rotate(120deg);
+		-o-transform: rotate(120deg);
+		-webkit-transform: rotate(120deg);
+		transform: rotate(120deg);
+	}
+}
+
 #pageContent {
 	min-height: 100%;
 	/* equal to footer height */
@@ -153,6 +190,9 @@ body > footer {
 	margin-bottom: 30px;
 	display: block;
 	width: 380px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 .highlights figure:nth-child(3n-2) {
@@ -162,6 +202,29 @@ body > footer {
 
 .highlights img {
 	display: block;
+}
+
+.highlights figure:before {
+	content: "click to read more...";
+	line-height: 50px;
+	height: 50px;
+	background: #666;
+	position: absolute;
+	top: -50px;
+	left: 0;
+	right: 0;
+	padding: 0 10px;
+	color: #ffffff;
+
+	-webkit-transition: top 500ms ease;
+	-moz-transition: top 500ms ease;
+	-ms-transition: top 500ms ease;
+	-o-transition: top 500ms ease;
+	transition: top 500ms ease;
+}
+
+.highlights figure:hover:before {
+	top: 0;
 }
 
 .highlights figcaption {
