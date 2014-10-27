@@ -1,19 +1,19 @@
-﻿* {
+* {
 	margin: 0;
 }
 
 html, body {
 	height: 100%;
-	font-family: Arial;
+	font-family: Lato;
 }
 
 body > header {
 	position: fixed;
-	height: 80px;
+	height: 60px;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.35);
 	width: 100%;
 	background: #FFF;
-	line-height: 80px;
+	line-height: 60px;
 	z-index: 1;
 }
 
@@ -21,13 +21,12 @@ h1 {
 	width: 1200px;
 	margin: 0 auto;
 	font-weight: bold;
-	letter-spacing: -3px;
-	text-transform: uppercase;
+	font-size: 24px;
 }
 
 #logo {
 	float: right;
-	margin-top: 20px;
+	margin-top: 10px;
 	transform: rotate(0);
 	transition: all 200ms linear;
 
@@ -62,149 +61,130 @@ h1 {
 	}
 }
 
-#pageContent {
+main {
 	min-height: 100%;
 	/* equal to footer height */
 	margin-bottom: -80px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding-top: 80px;
+	padding-top: 60px;
 }
 
-#pageContent:after {
+main:after {
 	content: "";
 	display: block;
 }
 
-body > footer, #pageContent:after {
+body > footer, main:after {
 	/* .push must be the same height as footer */
-	height: 80px; 
+	height: 90px; 
 }
 
 body > footer {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border-top: 1px dashed rgba(0,0,0,0.25);
-	font-size: 12px;
+	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: bold;
-	letter-spacing: 8px;
-	line-height: 79px;
+	line-height: 90px;
 	text-align: center;
-	color: #888;
+	color: #FFF;
+	background: linear-gradient(0deg, #2e2e2e 75%, #101010 100%);
 }
 
 .hero {
 	height: 400px;
 	background: url("Images/hero.jpg") center top fixed;
-	padding: 50px;
+	padding: 80px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	font-size: 60px;
+	text-align: center;
+	letter-spacing: -3px;
+	color: #FFF;
+	text-shadow: 0 0 30px rgba(0,0,0,0.75);
+}
+
+.hero strong {
+	display: block;
 	font-size: 72px;
 }
 
-.hero p {
-	font-family: Arial;
-	text-align: center;
-	color: #fff;
-	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-	letter-spacing: -6px;
-	line-height: 150px;
-}
-
-.hero p:first-child {
-	font-size: 150%;
-}
-
-.intro {
+.description {
 	width: 1200px;
 	margin: 0 auto 30px auto;
-	padding: 30px 0;
+	padding: 30px 30px 0;
 	text-align: justify;
 	line-height: 1.5;
 	color: #444;
 	position: relative;
 	z-index: 0;
-	overflow: hidden;
-	border-bottom: 1px solid #e8e8e8;
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-	-ms-column-count: 2;
-	-o-column-count: 2;
-	column-count: 2;
-	-webkit-column-gap: 30px;
-	-moz-column-gap: 30px;
-	-ms-column-gap: 30px;
-	-o-column-gap: 30px;
-	column-gap: 30px;
+	border-top: 1px solid #c0c0c0;
+	box-sizing: border-box;
+	font-size: 14px;
 }
 
-.intro:after,
-.intro:before {
-	width: 0;
-	height: 0;
-	content: "";
-	border-style: solid;
-	border-width: 300px;
-	top: 0;
-	display: block;
-	position: absolute;
-	z-index: -1;
+.description .image {
+	float: left;
+	width: 50%;
 }
 
-.intro:after {
-	border-color: #F0F0F0 transparent transparent #F0F0F0;
-	right: 0;
+.description .text {
+	float: right;
+	width: 50%;
 }
 
-.intro:before {
-	border-color: transparent #F0F0F0 #F0F0F0 transparent;
-	right: 600px;
-}
-
-.intro p {
+.description p {
 	margin-bottom: 1.5em;
 }
 
-.intro img {
+.description .text img {
 	float: right;
-	margin: 0 0 10px 20px;
+	margin: 0 0 30px 30px;
 }
 
-.highlights {
-	width: 1200px;
-	margin: 30px auto;
-}
-
-.highlights:after {
+.description:after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
-.highlights figure {
+.features {
+	width: 1200px;
+	margin: 30px auto;
+	padding: 0 30px;
+	box-sizing: border-box;
+}
+
+.features:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.features figure {
 	float: left;
 	margin-left: 30px;
 	margin-bottom: 30px;
 	display: block;
-	width: 380px;
+	width: 360px;
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
 }
 
-.highlights figure:nth-child(3n-2) {
+.features figure:nth-child(3n-2) {
 	margin-left: 0;
 	clear: left;
 }
 
-.highlights img {
+.features img {
 	display: block;
 }
 
-.highlights figure:before {
+.features figure:before {
 	content: "click to read more...";
 	line-height: 50px;
 	height: 50px;
@@ -223,14 +203,22 @@ body > footer {
 	transition: top 500ms ease;
 }
 
-.highlights figure:hover:before {
+.features figure:hover:before {
 	top: 0;
 }
 
-.highlights figcaption {
+.features figcaption {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 10px 0;
 	line-height: 1.5;
+	font-size: 14px;
+	text-align: justify;
+}
+
+.features figcaption strong {
+	display: block;
+	font-weight: bold;
+	font-size: 24px;
 }
