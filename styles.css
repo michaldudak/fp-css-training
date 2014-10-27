@@ -121,7 +121,7 @@ body > footer {
 	color: #444;
 	position: relative;
 	z-index: 0;
-	border-top: 1px solid #c0c0c0;
+	border-top: 1px dotted #c0c0c0;
 	box-sizing: border-box;
 	font-size: 14px;
 }

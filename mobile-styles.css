@@ -1,0 +1,93 @@
+@media screen and (max-width: 1200px) {
+	* {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	body > header {
+		position: static;
+		line-height: 40px;
+		height: auto;
+		text-align: center;
+	}
+	
+	#logo {
+		display: none;
+	}
+	
+	h1 {
+		width: 100%;
+		padding: 5px 5px;
+	}
+
+	img {
+		max-width: 100%;
+	}
+	
+	main {
+		padding-top: 0;
+	}
+	
+	.hero {
+		background-position: center center;
+		height: auto;
+		font-size: 32px;
+		transition: all 500ms ease;
+		padding: 35px 5px;
+	}
+
+	.hero strong {
+		font-size: 38px;
+	}
+
+	.description {
+		width: 100%;
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-ms-column-count: 1;
+		-o-column-count: 1;
+		column-count: 1;
+		padding: 30px;
+	}
+	
+	.description .image,
+	.description .text {
+		float: none;
+		width: auto;
+	}
+	
+	.description .text img {
+		float: none;
+		margin: 10px auto;
+		display: block;
+		
+	}
+
+	.features {
+		width: 100%;
+		padding: 30px 30px 0;
+		margin-bottom: 0;
+	}
+
+	.features figure {
+		float: none;
+		width: 100%;
+		margin: 0 0 30px 0;
+		border-bottom: 1px dashed #DDD;
+	}
+	
+	.features figcaption {
+		text-align: center;
+	}
+
+	.features figure:before {
+		content: "";
+		display: none;
+	}
+
+	.features img {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}
