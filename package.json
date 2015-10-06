@@ -1,0 +1,24 @@
+{
+  "name": "fp-css-training",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaldudak/fp-css-training.git"
+  },
+  "keywords": [
+    "css",
+    "training"
+  ],
+  "author": "Michał Dudak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaldudak/fp-css-training/issues"
+  },
+  "homepage": "https://github.com/michaldudak/fp-css-training#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
